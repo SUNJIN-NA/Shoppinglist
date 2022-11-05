@@ -5,8 +5,15 @@ app.get('/', function (req, res) {
     res.send('Hello World')
 })
 
-app.get('/product.list', function (req, res) {
+app.get('/product-list', function (req, res) {
     const product = [{ name: 'test name' }]
+    res.send(JSON.stringify(product))
+})
+
+app.get('/product-detail', function (req, res) {
+    // res.statusCode = 404
+    // res.end()
+    const product = { name: 'test name' }
     res.send(JSON.stringify(product))
 })
 
